@@ -23,43 +23,52 @@
         require_once('../assets/html/header.html');
         ?>
     </header>
-    <div class= "container">
-   
 
+        
+        <main class= "container">
+            <br>
             <h2>Employee Details</h2>
+            <br>
+            <form>
             <input type="hidden" class="form-control" name="id" id="employeeId" value="<?php echo $employee['id'] ?>">
-            <div class="col-md-6">
-                <label for="inputName" class="form-label">Name</label>
+            <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <label for="inputName" class="form-label font-weight-bold">Name</label>
                 <input type="text" class="form-control" name="name" id="inputName" value="<?php echo $employee['name'] ?>">
             </div>
-            <div class="col-md-6">
-                <label for="inputLastName" class="form-label">Last Name</label>
+            <div class="col-sm-4">
+                <label for="inputLastName" class="form-label font-weight-bold">Last Name</label>
                 <input type="text" class="form-control" name="lastName" id="inputLastName" value="<?php echo $employee['lastName'] ?? '' ?>">
             </div>
-            <div class="col-6">
-                <label for="inputEmail" class="form-label">Email address</label>
+            </div><br>
+            <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <label for="inputEmail" class="form-label font-weight-bold">Email address</label>
                 <input type="email" class="form-control" name="email" id="inputEmail" placeholder="user@mail.com" value="<?php echo $employee['email'] ?>">
             </div>
-            <div class="col-6">
-                <label for="selectGender" class="form-label">Gender</label>
+            <div class="col-sm-4">
+                <label for="selectGender" class="form-label font-weight-bold">Gender</label>
                 <select class="form-control" name="gender" id="selectGender">
                     <option value="man">Man</option>
                     <option value="woman">Woman</option>
                     <option Value="other">Other</option>
                 </select>
             </div>
-            <div class="col-md-12">
-                <div class="col-md-6">
-                    <label for="inputAge" class="form-label">Age</label>
+            </div><br>
+            <div class="row justify-content-center">
+            <div class="col-sm-4">
+                    <label for="inputAge" class="form-label font-weight-bold">Age</label>
                     <input type="text" class="form-control" name="age" id="inputAge" value="<?php echo $employee['age'] ?>">
-                </div>
             </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
+            <div class="col-sm-4">
+                <label for="inputCity" class="form-label font-weight-bold">City</label>
                 <input type="text" class="form-control" name="city" id="inputCity" value="<?php echo $employee['city'] ?>">
             </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">State</label>
+            </div><br>
+            <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <label for="inputState" class="form-label font-weight-bold">State</label>
+                <br>
                 <select id="selectState" class="form-select" name="state">
                     <option value="">Choose...</option>
                     <option value="CA">CA</option>
@@ -72,26 +81,30 @@
                     <option value="LU">LU</option>
                 </select>
             </div>
-            <div class="col-md-2">
-                <label for="inputZip" class="form-label">Zip</label>
+            <div class="col-sm-4">
+                <label for="inputZip" class="form-label font-weight-bold">Zip</label>
                 <input type="text" class="form-control" name="postalCode" id="inputZip" value="<?php echo $employee['postalCode'] ?>">
             </div>
-            <div class="col-md-6">
-                <label for="inputAddress" class="form-label">Street Address</label>
+            </div><br>
+            <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <label for="inputAddress" class="form-label font-weight-bold">Street Address</label>
                 <input type="text" class="form-control" name="streetAddress" id="inputAddress" value="<?php echo $employee['streetAddress'] ?>">
             </div>
-            <div class="col-md-6">
-                <label for="inputPhone" class="form-label">Phone number</label>
+            <div class="col-sm-4">
+                <label for="inputPhone" class="form-label font-weight-bold">Phone number</label>
                 <input type="text" class="form-control" name="phoneNumber" id="inputPhone" value="<?php echo $employee['phoneNumber'] ?>">
             </div>
-            <div class="col-12">
+            </div><br>
+            <div class="row justify-content-center">
+            <div class="col-sm-8">
                 <button type="submit" class="btn btn-primary" name="updateSubmit">Submit</button>
+                <button type="submit" class="btn btn-secondary" name="updateSubmit">Return</button>
             </div>
-        </form>
+            </div>
+            </form>
+        </main>
 
-        <div class="alert-wrapper side-alert"></div>
-    </section>
-</div>
     <footer>
         <?php
         require_once('../assets/html/footer.html');
