@@ -1,22 +1,8 @@
-var employees = (function () {
-  var json = null;
-  $.ajax({
-    async: false,
-    type: "GET",
-    url: "../src/library/employeeController.php",
-    dataType: "json",
-    success: function (data) {
-      json = data;
-    },
-  });
-  return json;
-})();
-
 $("#jsGrid").jsGrid({
   width: "80%",
 
   filtering: true,
-  editing: false,
+  editing: true,
   inserting: true,
   sorting: true,
   paging: true,
@@ -27,7 +13,28 @@ $("#jsGrid").jsGrid({
 
   deleteConfirm: "Do you really want to delete the client?",
 
-  data: employees,
+  controller: {
+    loadData: function (response) {
+      return $.ajax({
+        type: "GET",
+        url: "../src/library/employeeController.php",
+        data: response,
+        dataType: "json",
+      });
+    },
+
+    insertItem: $.noop,
+
+    updateItem: $.noop,
+
+    deleteItem: function (item) {
+      return $.ajax({
+        type: "DELETE",
+        url: "./library/employeeController.php/?id=" + item.id,
+        data: item,
+      });
+    },
+  },
 
   fields: [
     { name: "id", type: "hidden", visible: false, width: 15 },
