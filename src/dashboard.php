@@ -21,7 +21,7 @@
 // require("../src/library/sessionHelper.php");
 require(".././assets/html/header.html");
 ?>
-
+<br>
 <div id="jsGrid" class="container"></div>
 
 

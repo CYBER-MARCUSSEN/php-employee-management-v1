@@ -30,21 +30,21 @@
             <h2>Employee Details</h2>
             <br>
             <form>
-            <input type="hidden" class="form-control" name="id" id="employeeId" value="<?php echo $employee['id'] ?>">
+            <input type="hidden" class="form-control" name="id" id="employeeId" value="">
             <div class="row justify-content-center">
             <div class="col-sm-4">
                 <label for="inputName" class="form-label font-weight-bold">Name</label>
-                <input type="text" class="form-control" name="name" id="inputName" value="<?php echo $employee['name'] ?>">
+                <input type="text" class="form-control" name="name" id="inputName" value="">
             </div>
             <div class="col-sm-4">
                 <label for="inputLastName" class="form-label font-weight-bold">Last Name</label>
-                <input type="text" class="form-control" name="lastName" id="inputLastName" value="<?php echo $employee['lastName'] ?? '' ?>">
+                <input type="text" class="form-control" name="lastName" id="inputLastName" value="">
             </div>
             </div><br>
             <div class="row justify-content-center">
             <div class="col-sm-4">
                 <label for="inputEmail" class="form-label font-weight-bold">Email address</label>
-                <input type="email" class="form-control" name="email" id="inputEmail" placeholder="user@mail.com" value="<?php echo $employee['email'] ?>">
+                <input type="email" class="form-control" name="email" id="inputEmail" placeholder="user@email.com" value="">
             </div>
             <div class="col-sm-4">
                 <label for="selectGender" class="form-label font-weight-bold">Gender</label>
@@ -58,11 +58,11 @@
             <div class="row justify-content-center">
             <div class="col-sm-4">
                     <label for="inputAge" class="form-label font-weight-bold">Age</label>
-                    <input type="text" class="form-control" name="age" id="inputAge" value="<?php echo $employee['age'] ?>">
+                    <input type="text" class="form-control" name="age" id="inputAge" value="">
             </div>
             <div class="col-sm-4">
                 <label for="inputCity" class="form-label font-weight-bold">City</label>
-                <input type="text" class="form-control" name="city" id="inputCity" value="<?php echo $employee['city'] ?>">
+                <input type="text" class="form-control" name="city" id="inputCity" value="">
             </div>
             </div><br>
             <div class="row justify-content-center">
@@ -83,23 +83,25 @@
             </div>
             <div class="col-sm-4">
                 <label for="inputZip" class="form-label font-weight-bold">Zip</label>
-                <input type="text" class="form-control" name="postalCode" id="inputZip" value="<?php echo $employee['postalCode'] ?>">
+                <input type="text" class="form-control" name="postalCode" id="inputZip" value="">
             </div>
             </div><br>
             <div class="row justify-content-center">
             <div class="col-sm-4">
                 <label for="inputAddress" class="form-label font-weight-bold">Street Address</label>
-                <input type="text" class="form-control" name="streetAddress" id="inputAddress" value="<?php echo $employee['streetAddress'] ?>">
+                <input type="text" class="form-control" name="streetAddress" id="inputAddress" value="">
             </div>
             <div class="col-sm-4">
                 <label for="inputPhone" class="form-label font-weight-bold">Phone number</label>
-                <input type="text" class="form-control" name="phoneNumber" id="inputPhone" value="<?php echo $employee['phoneNumber'] ?>">
+                <input type="text" class="form-control" name="phoneNumber" id="inputPhone" value="">
             </div>
             </div><br>
             <div class="row justify-content-center">
             <div class="col-sm-8">
                 <button type="submit" class="btn btn-primary" name="updateSubmit">Submit</button>
-                <button type="submit" class="btn btn-secondary" name="updateSubmit">Return</button>
+                <a href="../src/dashboard.php">
+                <button type="button" class="btn btn-secondary" name="return">Return</button>
+                </a>
             </div>
             </div>
             </form>
