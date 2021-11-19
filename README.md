@@ -1,3 +1,9 @@
+
+# alerta
+
+aquest repo li vaig treure l'origen remot de dalamov i he afegit el CYBER_MARCUSSEN apareix be amb git remote -v pero quan faig
+el push no funciona, i per tant no m¡apareix a github revisar
+
 # PHP BASIC APPLICATION TO MANAGE AN EMPLOYEES LIST
 
 # Employee management V1
